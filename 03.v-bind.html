@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+  <p>{{hello()}} <a v-bind:href="link"> Link</a> </p>
+  <!-- v-bind attribute ile instance içerisindeki bir property.e bağlantı verdik -->
+</div>
+
+<script type="text/javascript">
+    new Vue({
+    el : "#app",
+    data : {
+        title : "Merhaba, ",
+        message : "Rümeysa Seven hoşgeldin!",
+        link : "https://v2.vuejs.org",
+       
+    },
+    methods : {
+        hello : function (){
+            return this.title + this.message
+        }
+    		
+        }
+    },
+);
+</script>
+</body>
+</html>

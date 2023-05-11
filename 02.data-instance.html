@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+  <p>{{hello()}} </p>
+  <!-- function.ları () ile birlikte yazarız? -->
+</div>
+
+<script type="text/javascript">
+    new Vue({
+    el : "#app",
+    data : {
+      	title : "Merhaba, ",
+        message : "Rümeysa Seven hoşgeldin!"       
+    },
+    methods : {
+    	hello : function(){
+             return this.title + this.message
+            //  data instance içerisine erişmek için this kullanırız
+        }
+        }
+    });
+</script>
+</body>
+</html>

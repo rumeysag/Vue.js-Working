@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+    
+<div id="exercise">
+    <p>
+     Vue.js Muazzam bir Framework - {{name}} ({{age}})
+    </p>
+   <p>
+   {{yasinKatı(32,5)}}
+   </p>
+   
+  </div>
+
+  <script type="text/javascript">
+    new Vue({
+    el : "#exercise",
+    data : {
+      	name : "Rümeysa",
+        age : "32",
+        blogLink :  "<a href='http://vuejsegitim.com'>Link</a>"
+    },
+    methods : {
+    		yasinKatı(sayi1, sayi2) {
+         return sayi1*sayi2;
+        }
+    }
+});
+  </script>
+    
+</body>
+</html>
