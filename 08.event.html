@@ -14,13 +14,16 @@
         <p>{{counter}}</p>
         <button v-on:click="counter++">Artır</button>
         <button v-on:click="increaseCounter">Artır</button>
+        <p v-on:mousemove="updateCoords"> Koordinatlar: {{x}}, {{y}}</p>
     </div>
 
     <script type="text/javascript">
           new Vue({
             el: "#app",
             data : {
-                counter : 0
+                counter : 0,
+                x : 0,
+                y : 0
             },
             methods : {
                 showAlert : function(){
@@ -28,6 +31,10 @@
                 },
                 increaseCounter : function (){
                     this.counter++
+                },
+                updateCoords : function(event){
+                    this.x = event.clientX;
+                    this.y = event.clientY;
                 }
             }
         
