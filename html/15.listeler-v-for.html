@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="(product, index) in products" :key="product">
+          {{ product }} - {{ index }}
+        </li>
+      </ul>
+      <button @click="products.push('Hoparlör')"> Ekle</button>
+
+      <div v-for="(product, index) in products">
+        <h3>{{product}}</h3>
+        <p>{{ index }}</p>
+      </div>
+
+      <template v-for="(product, index) in products">
+        <h3>{{product}}</h3>
+        <p>{{ index }}</p>
+      </template>
+
+      <ul>
+        <li v-for="personel in persons">
+            <ul>
+                <li v-for="(value, key, index) in personel"> <strong>{{key}}</strong> : {{value}} {{index}}</li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- belirli bir sayı kadar html elementini döndürmek için -->
+
+    <span v-for="i in 5"> {{ i }}</span>
+
+    <script type="text/javascript">
+      new Vue({
+        el: "#app",
+        data: {
+          products: ["Monitör", "Klavye", "Askı", "Masa"],
+          persons: [
+            { name: "Gökhan", email: "gökhan@gkandemir.com" },
+            { name: "Felakettin", email: "felo@gkandemir.com" },
+            { name: "Defne", email: "defne@gkandemir.com" },
+            { name: "İflasettin", email: "iflasettin@gkandemir.com" },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
